@@ -1,11 +1,13 @@
-
+<?php
+$array = array(1, 1, 1, 1,  1, 8 => 1,  4 => 1, 19, 3 => 13);
+print_r($array);
+?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv = "X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -13,9 +15,8 @@
     <title>MySQL PHP Test</title>
 </head>
 <body class="container">
- <?php
-$array = array(1, 1, 1, 1,  1, 8 => 1,  4 => 1, 19, 3 => 13);
-print_r($array);
-?>
+    <?php  
+        echo $output; 
+    ?>
 </body>
 </html>

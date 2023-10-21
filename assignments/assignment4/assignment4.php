@@ -1,10 +1,12 @@
 <?php
 
+$output="";
+
 if(count($_POST) > 0){ 
   require_once 'addName.php'; 
   $AddName = new AddName(); 
-  $output = $AddName->ClearName(); 
-  } 
+  $output = $AddName->ClearNames(); 
+  }
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,13 +25,13 @@ if(count($_POST) > 0){
   <body>
       <div class="container">
         <h1>Add Names</h1>
-        <form action="addName.php" method="post"> 
-        <input type="button" name="AddName" class="btn btn-primary" value="Add Name">
-        <input type="button" name="ClearNames" class="btn btn-primary" value="Clear Names">
+        <form action="assignment4.php" method="post"> 
+        <input type="submit" name="AddName" class="btn btn-primary" value="Add Name">
+        <input type="submit" name="ClearNames" class="btn btn-primary" value="Clear Names">
         <div id="errorMsg"></div>
         <div class="form-group">
           <label for="flname">Enter Name</label>
-          <input type="text" class="form-control" id="flname">
+          <input type="text" name="name" class="form-control" id="flname">
         </div>
         <div class="form-group">
         <label for="listofnames">List of Names</label>

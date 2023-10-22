@@ -5,7 +5,7 @@ $success="";
 
 if(count($_POST) > 0){ 
   function submit(){
-        mkdir("directories/directoryname,0777,true");
+        mkdir("/home/publc_html/directories/directoryname,0777,true");
         
         // }if submit() ==true {
         //   $success=  ("File and directory were created");

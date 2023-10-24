@@ -1,17 +1,12 @@
 
 <?php
 
-$success="";
+$output="";
 
 if(count($_POST) > 0){ 
-  function submit(){
-        mkdir("/home/publc_html/directories/directoryname,0777,true");
-        
-        // }if submit() ==true {
-        //   $success=  ("File and directory were created");
-        // } else {
-        //   $success="flie could not be made";
-         }
+  require_once 'directories.php';
+  $daf= new Directories();
+  $output=$daf->makeNew();
         }
 ?>
 
@@ -34,19 +29,20 @@ if(count($_POST) > 0){
 
       <p>Enter a folder name and the contents of a file.  Folder names should contain alpha numeric characters only.</p>
 
-      <php echo $success ?>
+      <p><?php echo $output ?></p>
+      
           
-      <form method="post" action="directory_file.php">
+      <form method="post" action="assignment5.php"> 
         <div class="form-group">
           <label for="foldername">Folder Name</label>
-          <input type="text" class="form-control" id="directoryname" name="directoryname">
+          <input type="text" class="form-control" id="directoryName" name="directoryName">
         </div>
         <div class="form-group">
           <label for="filecontent">File Content</label>
-          <textarea name="filecontent" id="filecontent" name="filecontent" class="form-control" cols="20" rows="6"></textarea>
+          <textarea  id="fileCon" name="fileCon" class="form-control" cols="20" rows="6"></textarea>
           
         </div>
-        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+        <button type="submit" class="btn btn-success" name="submit">Submit</button>
       </form>
 
       

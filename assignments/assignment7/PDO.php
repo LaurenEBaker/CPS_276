@@ -15,8 +15,7 @@ if ($file['file'] != "") {
     $file = $_FILES['file'];
 }
 else {
-    echo 'error^^^No file was uploaded. Make sure you 
-    choose a file to upload.';
+    echo 'error^^^No file was uploaded. Make sure you choose a file to upload.';
 }
 
 //error for file size too big

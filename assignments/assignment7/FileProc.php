@@ -2,14 +2,14 @@
 
  class FileProc {
 	
-	private fileUpload(){
+	private function fileUpload(){
 		$filename = $file['name'];
 		$file = $_FILES['file'];
 		return "file upload";
 		}
 			
-	private displayList(){
-		return ("<p><a  target='_blank' href= "$this.$file->path" "." '.pdf'>test 1</a></p>");
+	private function displayList(){
+		return ("$file");
 		}
 
 	public function init(){

@@ -20,12 +20,12 @@ $arr = $fileProc->init();
     <h2>Upload File</h2>
     <?php echo $arr[0]; ?>
     <label for="filename">File Name</label><input type="text" id="filename" name="filename" class="form-control"><br>
-    <label> Choose file </label>
-    <input type="file" id="file" name="file" class="btn-file"><br>
-    <button type="submit" id="getInfo" class="btn btn-primary" name="submit">Send to Server</button>
+    <label for="formFile" class="form-label"> Choose File </label>
+    <input class="form-control" type="file" id="file" name="file"><br>
+    <button type="submit" id="getInfo" class="btn btn-primary"  name="submit">Send to Server</button>
     <h2>Display File List</h2>
-    <?php echo $arr[1] ?>
-    <li><a target='_blank' href= "$filename".pdf>test 1</a></li>
+    <?php echo $arr[1]?>
+    <li><a target='_blank' href= "$filename".pdf></a></li>
     <div id="result"></div>
        
     </div>

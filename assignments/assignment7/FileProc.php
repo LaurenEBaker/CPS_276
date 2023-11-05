@@ -1,6 +1,8 @@
 <?php
 
  class FileProc {
+private $file ="";
+private $_FILES="";
 	
 	private function fileUpload(){
 		$filename = $file['name'];
@@ -9,7 +11,7 @@
 		}
 			
 	private function displayList(){
-		return ("$file");
+		return ("");
 		}
 
 	public function init(){

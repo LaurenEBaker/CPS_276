@@ -1,29 +1,36 @@
 <?php
 
-public class FileProc {
+ class FileProc {
+	
+	private fileUpload(){
+		$filename = $file['name'];
+		$file = $_FILES['file'];
+		return "file upload";
+		}
+			
+	private displayList(){
+		return ("<p><a  target='_blank' href= "$this.$file->path" "." '.pdf'>test 1</a></p>");
+		}
 
 	public function init(){
 		if(count($_POST) > 0){
 		return [$this->fileUpload(), $this->displayList()];
-		} 
-		else { 
+		}
+		else {
 		return ["", $this->displayList()];
-		} 
-		} 
+		}
+		}
+
+		
+			
 // $arr= "There are no files to display";
 // //error for no file entered
-// if ($_POST['filename']!=""){
-//     $filename = $file['name'];
-// }
-// else{
+// if ($_POST['filename']==""){
 //     echo 'error^^^No file name was entered';
 // }
 
 // //error for no file uploaded
 // if ($file['file'] != "") {
-//     $file = $_FILES['file'];
-// }
-// else {
 //     echo 'error^^^No file was uploaded. Make sure you choose a file to upload.';
 // }
 
@@ -51,7 +58,5 @@ public class FileProc {
 
 // //error for database couldn't enter  record
 
-
-// return ("<p><a  target='_blank' href= "$this->path" "." '.pdf'>test 1</a></p>");
 }
 ?>

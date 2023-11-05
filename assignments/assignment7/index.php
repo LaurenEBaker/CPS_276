@@ -1,5 +1,5 @@
 <?php
-require_once 'classes/FileProc.php'; 
+require_once 'FileProc.php'; 
 $fileProc = new FileProc();
 $arr = $fileProc->init();
 ?>

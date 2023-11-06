@@ -2,15 +2,14 @@
 
  class FileProc {
 private $file ="";
-private $_FILES="";
 	
-	private function fileUpload(){
-		$filename = $file['name'];
+	public function fileUpload(){
+		$filename = this->$file['name'];
 		$file = $_FILES['file'];
 		return "file upload";
 		}
 			
-	private function displayList(){
+	public function displayList(){
 		return ("");
 		}
 

@@ -15,17 +15,17 @@ $arr = $fileProc->init();
   
   </head>
   <body>
-  <form method="post" action="index.php"> 
+  <form method="post" enctype="multipart/form-data" action="index.php"> 
     <div class="container">
     <h2>Upload File</h2>
-    <?php echo $arr[0]; ?>
-    <label for="filename">File Name</label><input type="text" id="filename" name="filename" class="form-control"><br>
-    <label for="formFile" class="form-label"> Choose File </label>
-    <input class="form-control" type="file" id="file" name="file"><br>
+    <?php echo $arr[0]; ?><br>
+    <label for="name">File Name</label><input type="text" id="name" name="name" class="form-control"><br>
+    <label for="userfile" class="form-label"> Choose File </label>
+    <input class="form-control" type="file" id="userfile" name="userfile"><br>
     <button type="submit" id="getInfo" class="btn btn-primary"  name="submit">Send to Server</button>
     <h2>Display File List</h2>
     <?php echo $arr[1]?>
-    <li><a target='_blank' href= "$filename".pdf></a></li>
+    <li><a target='_blank' href='filepath'.pdf>File 1</a></li>
     <div id="result"></div>
        
     </div>

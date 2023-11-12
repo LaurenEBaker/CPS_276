@@ -1,8 +1,10 @@
 <?php
  echo json_encode("displaying");
 
-public function getNames($type){
-		
+ function getNames($type){
+
+    echo json_encode("trying");
+
     /* CREATE AN INSTANCE OF THE PDOMETHODS CLASS*/
     $pdo = new PdoMethods();
 

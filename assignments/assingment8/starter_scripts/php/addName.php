@@ -1,10 +1,12 @@
 <?php
-echo json_encode("testing");
-    private function addName(){
-	
-		echo "being called";
+require_once "russet-v8.wccnet.edu/~lebaker/CPS_276/assignments/assingment8/starter_scripts/classes/Pdo_methods.php";
 
-		$data = json_decode($_POST['data']);
+echo json_encode("testing");
+    //function addName($){
+	
+		echo json_encode("being called");
+
+		$data = json_decode($_POST['data'],true);
        // $tempArr= explode($data);
         
        // $name = "{$tempArr[1]}, {$tempArr[0]}";
@@ -44,6 +46,6 @@ echo json_encode("testing");
 	];
 	
 	echo json_encode($response);
-	}
+	//}
 
 ?>

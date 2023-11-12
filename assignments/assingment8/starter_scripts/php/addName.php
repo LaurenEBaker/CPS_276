@@ -1,14 +1,13 @@
 <?php
-
+echo json_encode("testing");
     private function addName(){
+	
+		echo "being called";
+
+		$data = json_decode($_POST['data']);
+       // $tempArr= explode($data);
         
-        $nameArr=[];
-        
-        $tempArr= explode(" ",$_POST['data']);
-        
-        print_r($tempArr);
-        
-        $name = "{$tempArr[1]}, {$tempArr[0]}";
+       // $name = "{$tempArr[1]}, {$tempArr[0]}";
 	
 		$pdo = new PdoMethods();
 
@@ -17,8 +16,8 @@
 
 			 
 	    /* THESE BINDINGS ARE LATER INJECTED INTO THE SQL STATEMENT THIS PREVENTS AGAIN SQL INJECTIONS */
-	    $bindings = [
-			[':name',$_POST['name'],'str'],
+		$bindings = [
+			[':name',$data->name,'str'],
 			
 		];
 
@@ -27,11 +26,24 @@
 
 		/* HERE I AM RETURNING EITHER AN ERROR STRING OR A SUCCESS STRING */
 		if($result === 'error'){
-			return 'There was an error adding the name';
+			$response = (object)[
+			'masterstatus'=>'error',
+			'resp'=>"There was an error entering the name"
+		];
 		}
 		else {
-			return 'Name has been added';
-		}
+			$response = (object)[
+			'masterstatus'=>'success',
+			'resp'=>"Name has been added"
+		];
+	}
+	$output = "The first name is {$data->name}<br>";
+	$response = (object)[
+		'masterstatus'=>'success',
+		'resp'=>$output
+	];
+	
+	echo json_encode($response);
 	}
 
 ?>

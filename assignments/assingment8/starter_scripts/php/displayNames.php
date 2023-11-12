@@ -1,4 +1,5 @@
 <?php
+ echo json_encode("displaying");
 
 public function getNames($type){
 		

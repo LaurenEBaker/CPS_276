@@ -1,36 +1,36 @@
  <?php 
 require_once 'addNote.php';
-$notes = new addNote();
-//$notes = $dt->checkSubmit();
+$note = new addNote();
+$notes = $note->addingNote();
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Add Note</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
- 
-    </style>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Add Note</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="public/css/main.css">
+  
   </head>
   <body>
+  <form method="post" enctype="multipart/form-data" action="Note.php"> 
       <div class="container">
-        <h1>Add Note</h1>
+        <h1>Add Note </h1>
+        <?php echo $notes; ?><br>
         <ul><a target='_blank' href='displayingNote.php'>Display Notes</a></ul>
 
+
         <div class="form-group">
-          <label for="dateTime">Date and Time</label>
-          <input type="datetime-local" name="fn" class="form-control" id="dateTime">
-          <label for="dateTime">Note</label>
+          <label for="date_time">Date and Time</label>
+          <input type="datetime-local" name="date_time" class="form-control" id="date_time">
+          <label for="note">Note</label>
           <div class="form-floating">
-            <textarea class="form-control"  id="note" style="height: 350px"></textarea>
-          </div>
+            <textarea class="form-control"  name="note" id="note" style="height: 350px"></textarea>
         </div>
-        <input type="button" id="addNote" class="btn btn-primary" value="Add Note">
+        </div>
+        <input type="submit" name="submit" id="addNote" class="btn btn-primary" value="Add Note">
        </div>
   </body>
 </html>

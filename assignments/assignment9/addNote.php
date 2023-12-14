@@ -80,8 +80,6 @@ class addNote {
          $records = $pdo->selectBinded($sql, $bindings);
 
          $date_time=date("m\\\j\\\Y h:i A", $date_Time);
-
-        echo $date_time;
         // /* IF THERE WAS AN ERROR DISPLAY MESSAGE */
          if($records == 'error'){
              return 'There has been an error processing your request';
